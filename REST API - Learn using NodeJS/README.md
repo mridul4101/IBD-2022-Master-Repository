@@ -4,17 +4,17 @@
 
 A REST API (also known as RESTful API) is an application programming interface (API or web API) that conforms to the constraints of REST architectural style and allows for interaction with RESTful web services. REST stands for representational state transfer and was created by computer scientist Roy Fielding.
 
-*Analogy*: Imagine, if you will, that you are a frontend developer, and you get a project to make a calendar app for a client. Another company has already gotten started on the backend development, so you contact them to find out what HTTP requests you need to make in order to fetch, create, and delete calendar entries. They give you a list:
+*Analogy*: Imagine, if you will, that you are a frontend developer, and you get a project to make a ToDo app for a client. Another company has already gotten started on the backend development, so you contact them to find out what HTTP requests you need to make in order to fetch, create, and delete ToDo tasks. They give you a list:
 
-- To get calendar entries, send HTTP POST to `/calendar/entries/get`.
-- To create a calendar entry, send HTTP POST to `/calendar/entries/create`, and include the entry details in JSON.
-- To delete a calendar entry, send HTTP POST to `/calendar/entries/delete`, and send a JSON object with a single `id` key.
+- To get ToDo tasks, send HTTP POST to `/todo/tasks/get`.
+- To create a ToDo task, send HTTP POST to `/todo/tasks/create`, and include the entry details in JSON.
+- To delete a ToDo task, send HTTP POST to `/todo/tasks/delete`, and send a JSON object with a single `id` key.
 
-Fair enough. You build the frontend, you test extensively, everything works, everyone’s happy. Then, a few months later, you get a project to make a calendar app for a different client. Once again, the client had another company do the backend development, and they give you this API:
+Fair enough. You build the frontend, you test extensively, everything works, everyone’s happy. Then, a few months later, you get a project to make a ToDo app for a different client. Once again, the client had another company do the backend development, and they give you this API:
 
-- To get calendar entries, send HTTP GET to `/calendar/loadentries`.
-- To create a calendar entry, send HTTP POST to `/calendar/newentry`, and include the entry details as an XML document.
-- To delete a calendar entry, send HTTP POST to `/calendar/deleteentry?id=<entry_id>`.
+- To get ToDo tasks, send HTTP GET to `/todo/load-tasks`.
+- To create a ToDo task, send HTTP POST to `/todo/create-task`, and include the task details as an XML document.
+- To delete a ToDo task, send HTTP POST to `/todo/delete-task?id=<task_id>`.
 
 Basically, nothing you built for the previous app can be reused, as far as backend communication goes. **Now imagine this chaos on an industry-wide scale.**
 
